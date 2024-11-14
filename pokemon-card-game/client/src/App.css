@@ -1,0 +1,146 @@
+/* Set solid black background */
+body {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grid layout for Pokémon cards with reduced gap */
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px; /* Reduced gap between cards */
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Smaller Pokémon card styling */
+.pokemon-card {
+  width: 100px;
+  padding: 5px; /* Reduced padding */
+  border-radius: 8px; /* Slightly smaller border radius */
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-card h3 {
+  font-size: 0.85em;
+  font-weight: bold;
+  color: #fff;
+  margin: 3px 0; /* Reduced margin for title */
+}
+
+.pokemon-card img {
+  width: 50px;
+  height: 50px;
+  margin: 3px 0; /* Reduced margin for image */
+}
+
+.pokemon-stats p {
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #fff;
+  margin: 2px 0; /* Reduced margin for stats */
+}
+
+/* stats for each card*/
+.pokemon-stats p {
+  font-size: 0.75em;
+  font-weight: bold; /* Bold text for stats */
+  color: #fff;
+  margin: 3px 0;
+}
+
+
+
+/* Type color backgrounds */
+.type-grass { background-color: green; }
+.type-fire { background-color: rgb(202, 6, 6); }
+.type-water { background-color: blue; }
+.type-electric { background-color: rgb(233, 233, 12); }
+.type-psychic { background-color: rgb(253, 43, 225); }
+.type-ice { background-color: #23f7f7; }
+.type-dragon { background-color: #f86009; }
+.type-dark { background-color: #0f0e0e; }
+.type-fairy { background-color: #f53e66; }
+.type-steel { background-color: silver; }
+.type-fighting { background-color: orange; }
+.type-poison { background-color: #a040a0; }
+.type-ground { background-color: rgb(94, 92, 74); }
+.type-flying { background-color: #1f0f4e; }
+.type-rock { background-color: gray; }
+.type-bug { background-color: #08f72f; }
+.type-ghost { background-color: #2a0468; }
+.type-normal { background-color: tan; }
+
+/* Sticky battle controls */
+.battle-controls {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.battle-button, .reset-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  transition: background-color 0.3s;
+}
+
+.battle-button:hover {
+  background-color: #0056b3;
+}
+
+.reset-button {
+  background-color: #dc3545;
+}
+
+.reset-button:hover {
+  background-color: #c82333;
+}
+
+.battle-result {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e6e20d;
+  margin-top: 20px;
+}
+
+/* Pokemon card styling for selected state */
+.selected {
+  border: 3px solid #ffcb05; /* Yellow border for selected Pokémon */
+  box-shadow: 0 4px 8px rgba(255, 203, 5, 0.5);
+  transform: scale(1.05);
+}
+
+/* Battle result styling */
+.battle-result {
+  margin-left: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ebe714;
+  display: inline-block;
+}
